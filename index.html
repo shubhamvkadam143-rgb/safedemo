@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10172a"><title>SafeHaven Mesh | SMS Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header><div class="brand"><div class="logo">⌂</div><div><h1>SafeHaven Mesh</h1><p>Emergency communication demo</p></div></div><span class="pill">FREE DEMO · NO REAL SMS</span></header>
+    <section class="notice"><strong>Demo mode is ON.</strong> OTP and emergency messages are simulated in this app. No SMS or calls are sent to real phones.</section>
+    <section class="grid">
+      <article class="card"><div class="eyebrow">01 · MOBILE VERIFICATION</div><h2>Demo OTP</h2><p>Generate a temporary demo code and verify it. The code appears on this screen only.</p>
+        <label for="otpPhone">Mobile number (+91)</label><input id="otpPhone" type="tel" placeholder="+919876543210" value="+919876543210">
+        <button id="sendOtp" class="secondary">Generate demo OTP</button>
+        <div id="otpReveal" class="otp-reveal hidden"></div>
+        <label for="otpCode">Enter demo OTP</label><input id="otpCode" inputmode="numeric" maxlength="6" placeholder="6-digit OTP">
+        <button id="verifyOtp">Verify OTP</button><div id="otpStatus" class="status" aria-live="polite"></div>
+      </article>
+      <article class="card"><div class="eyebrow">02 · SOS & FAMILY ALERT</div><h2>Emergency alert</h2><p>Add family or emergency contacts. Location permission is requested only when you press the demo SOS button.</p>
+        <label for="contacts">Emergency contacts (one +91 number per line, maximum 5)</label><textarea id="contacts" rows="4">+919876543210</textarea>
+        <label for="note">Optional message</label><input id="note" maxlength="120" placeholder="I need help. Please contact me.">
+        <div class="location" id="locationState">Location not requested yet.</div>
+        <button id="sos" class="danger">🚨 Create DEMO SOS alert</button><div id="sosStatus" class="status" aria-live="polite"></div>
+      </article>
+    </section>
+    <section class="card history-card"><div class="history-head"><div><div class="eyebrow">03 · ACTIVITY</div><h2>Demo SMS history</h2></div><button id="refresh" class="small secondary">Refresh</button></div><div id="history"><p class="muted">No demo alerts created yet.</p></div></section>
+    <footer>SafeHaven Mesh prototype · Use a trusted emergency service for real emergencies. This demo does not contact emergency services.</footer>
+  </main>
+  <script src="script.js"></script>
+</body></html>
